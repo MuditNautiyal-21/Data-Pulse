@@ -21,16 +21,16 @@ def home():
 @app.get("/api/health")
 def health():
     """Overall health score = passed / total * 100."""
+    results = get_recent_results(limit=100)
     if not results:
         return {"health_score": 0, "total": 0, "message": "No results yet. Run: python run.py"}
-    
-    # Only look at the latest result per check
+
     latest = {}
     for r in results:
         key = r["check_name"] + r["source"]
         if key not in latest:
             latest[key] = r
-        
+
     checks = list(latest.values())
     passed = sum(1 for c in checks if c["passed"])
     total = len(checks)
@@ -45,6 +45,12 @@ def health():
             if not c["passed"] and c["severity"] == "critical"
         ),
     }
+
+@app.get("/api/results")
+def results(limit: int = 50):
+    """Get recent check results."""
+    data = get_recent_results(limit=limit)
+    return {"count": len(data), "results": data}
 
 @app.get("/api/sources")
 def sources():
@@ -67,4 +73,4 @@ def sources():
 @app.get("/dashboard", response_class=HTMLResponse)
 def dashboard():
     """Serve the dashboard page."""
-    return Path("templates/dashboards.html").read_text()
+    return Path("templates/dashboard.html").read_text()
