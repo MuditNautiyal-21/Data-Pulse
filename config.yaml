@@ -1,0 +1,20 @@
+# DataPulse Configuration
+
+sources:
+  ecommerce_orders:
+    type: csv
+    path: sample_data/orders.csv
+    description: "E-commerce orders table"
+
+  ecommerce_customers:
+    type: csv
+    path: sample_data/customers.csv
+    description: "E-commerce customers table"
+
+alerts:
+  slack:
+    enabled: false
+    webhook_url: "YOUR_WEBHOOK_URL_HERE"
+
+schedule:
+  frequency: daily
