@@ -1,0 +1,23 @@
+source: sample_data/customers.csv
+
+checks:
+  - name: "Customer ID not null"
+    type: null_check
+    column: customer_id
+    severity: critical
+
+  - name: "Customer ID is unique"
+    type: unique_check
+    column: customer_id
+    severity: critical
+
+  - name: "Email not null"
+    type: null_check
+    column: email
+    severity: warning
+
+  - name: "Country is valid"
+    type: accepted_values_check
+    column: country
+    accepted_values: ["US", "UK", "DE", "FR", "IN", "CA"]
+    severity: warning

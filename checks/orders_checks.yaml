@@ -1,0 +1,34 @@
+source: sample_data/orders.csv
+
+checks:
+  - name: "Order ID not null"
+    type: null_check
+    column: order_id
+    severity: critical
+
+  - name: "Order ID is unique"
+    type: unique_check
+    column: order_id
+    severity: critical
+
+  - name: "Amount not null"
+    type: null_check
+    column: amount
+    severity: warning
+
+  - name: "Amount is positive"
+    type: value_check
+    column: amount
+    condition: "> 0"
+    severity: warning
+
+  - name: "Order date not in future"
+    type: freshness_check
+    column: order_date
+    max_date: "today"
+    severity: warning
+
+  - name: "At least 100 rows"
+    type: row_count_check
+    min_count: 100
+    severity: critical
