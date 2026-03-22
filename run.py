@@ -6,7 +6,7 @@ import glob
 from engine.profiler import profile_source, print_profile
 from engine.check_runner import run_all_checks, print_results, load_checks
 from engine.storage import init_db, save_check_results, save_profile
-
+from engine.alerts import alert_on_failures
 
 def main():
     print("\n--- DataPulse Starting ---\n")
@@ -36,6 +36,8 @@ def main():
         results = run_all_checks(check_file)
         print_results(results, source)
         save_check_results(results, source)
+
+        alert_on_failures(results, source)
 
         total_passed += sum(1 for r in results if r["passed"])
         total_failed += sum(1 for r in results if not r["passed"])
