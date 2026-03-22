@@ -1,0 +1,8 @@
+pandas
+pyyaml
+duckdb
+fastapi
+uvicorn
+jinja2
+requests
+scipy
