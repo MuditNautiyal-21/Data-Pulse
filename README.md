@@ -48,21 +48,21 @@ One command. Zero config databases. Works on CSV, Parquet, or any SQL source.
 ### Dashboard
 *Pipeline health at a glance — overall score, pass/fail breakdown, check details*
 
-<img src="screenshots/dashboard.png" alt="DataPulse Dashboard" width="700"/>
+<img src="screenshots/Dashboard.PNG" alt="DataPulse Dashboard" width="700"/>
 
 <br/><br/>
 
 ### Slack Alerts
 *Real-time notifications with severity routing — critical vs warning*
 
-<img src="screenshots/slack_alert.png" alt="Slack Alert" width="700"/>
+<img src="screenshots/Slack alert.png" alt="Slack Alert" width="700"/>
 
 <br/><br/>
 
 ### Terminal Output
 *Detailed check results with PASS/FAIL status and severity levels*
 
-<img src="screenshots/terminal.png" alt="Terminal Output" width="700"/>
+<img src="screenshots/Terminal.PNG" alt="Terminal Output" width="700"/>
 
 </div>
 
