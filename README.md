@@ -17,7 +17,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Slack](https://img.shields.io/badge/Slack-Alerts-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://slack.com)
 
-[Quick Start](#-quick-start) · [Features](#-features) · [Architecture](#-architecture) · [Configuration](#-configuration)
+[Quick Start](#quick-start) · [Features](#features) · [Architecture](#architecture) · [Configuration](#configuration)
 
 </div>
 
