@@ -165,7 +165,7 @@ A dark-themed web dashboard showing:
                                  │
                                  ▼
          ┌───────────────────────────────────────────┐
-         │              DataPulse Engine              │
+         │              DataPulse Engine             │
          │                                           │
          │  ┌──────────┐  ┌──────────┐  ┌─────────┐  │
          │  │ Profiler  │→│  Check   │→ │ Anomaly │  │
