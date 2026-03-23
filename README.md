@@ -25,7 +25,7 @@
 
 ## The Problem
 
-Bad data costs companies **$12.9 million per year** ([Gartner](https://www.gartner.com/en/newsroom/press-releases)). Most data quality issues don't throw errors - they silently corrupt: null values creep into critical columns, duplicate records pile up, stale data gets served to dashboards, and nobody notices until the CEO asks *"why does this number look wrong?"*
+Bad data costs companies **$12.9 million per year** ([Gartner](https://www.gartner.com/en/data-analytics/topics/data-quality)). Most data quality issues don't throw errors - they silently corrupt: null values creep into critical columns, duplicate records pile up, stale data gets served to dashboards, and nobody notices until the CEO asks *"why does this number look wrong?"*
 
 ## The Solution
 
