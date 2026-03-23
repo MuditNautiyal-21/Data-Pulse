@@ -41,7 +41,7 @@ One command. Zero config databases. Works on CSV, Parquet, or any SQL source.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -68,7 +68,7 @@ One command. Zero config databases. Works on CSV, Parquet, or any SQL source.
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Option A: Docker (Recommended)
 ```bash
@@ -101,7 +101,7 @@ Open **http://localhost:8000/dashboard**
 
 ---
 
-## 🔍 Features
+## Features
 
 ### YAML-Defined Checks — No Code Required
 ```yaml
@@ -155,7 +155,7 @@ A dark-themed web dashboard showing:
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 ```
                         ┌─────────────────┐
@@ -195,7 +195,7 @@ A dark-themed web dashboard showing:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Data-Pulse/
@@ -270,7 +270,7 @@ alerts:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Technology | Role |
 |:---|:---|
@@ -285,7 +285,7 @@ alerts:
 
 ---
 
-## 🛣 Roadmap
+## Roadmap
 
 - [ ] PostgreSQL / MySQL source connectors
 - [ ] Schema change detection
@@ -298,7 +298,7 @@ alerts:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome. To get started:
 
@@ -310,7 +310,7 @@ Contributions are welcome. To get started:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — use it however you want.
 
