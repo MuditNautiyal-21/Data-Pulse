@@ -25,17 +25,17 @@
 
 ## The Problem
 
-Bad data costs companies **$12.9 million per year** ([Gartner](https://www.gartner.com/en/newsroom/press-releases)). Most data quality issues don't throw errors — they silently corrupt: null values creep into critical columns, duplicate records pile up, stale data gets served to dashboards, and nobody notices until the CEO asks *"why does this number look wrong?"*
+Bad data costs companies **$12.9 million per year** ([Gartner](https://www.gartner.com/en/newsroom/press-releases)). Most data quality issues don't throw errors - they silently corrupt: null values creep into critical columns, duplicate records pile up, stale data gets served to dashboards, and nobody notices until the CEO asks *"why does this number look wrong?"*
 
 ## The Solution
 
 **Data-Pulse** is a lightweight, open-source data quality engine that:
 
-1. **Profiles** your datasets automatically — row counts, null rates, distributions, data types
-2. **Runs checks** defined in simple YAML — no Python required to add new rules
+1. **Profiles** your datasets automatically - row counts, null rates, distributions, data types
+2. **Runs checks** defined in simple YAML - no Python required to add new rules
 3. **Detects anomalies** using statistical methods (z-scores) against historical baselines
 4. **Alerts your team** on Slack the moment something breaks
-5. **Displays health** on a real-time dashboard — green, yellow, red at a glance
+5. **Displays health** on a real-time dashboard - green, yellow, red at a glance
 
 One command. Zero config databases. Works on CSV, Parquet, or any SQL source.
 
@@ -46,14 +46,14 @@ One command. Zero config databases. Works on CSV, Parquet, or any SQL source.
 <div align="center">
 
 ### Dashboard
-*Pipeline health at a glance — overall score, pass/fail breakdown, check details*
+*Pipeline health at a glance - overall score, pass/fail breakdown, check details*
 
 <img src="screenshots/Dashboard.PNG" alt="DataPulse Dashboard" width="700"/>
 
 <br/><br/>
 
 ### Slack Alerts
-*Real-time notifications with severity routing — critical vs warning*
+*Real-time notifications with severity routing - critical vs warning*
 
 <img src="screenshots/Slack alert.png" alt="Slack Alert" width="700"/>
 
@@ -76,7 +76,7 @@ git clone https://github.com/MuditNautiyal-21/Data-Pulse.git
 cd Data-Pulse
 docker-compose up --build
 ```
-Open **http://localhost:8000/dashboard** — done.
+Open **http://localhost:8000/dashboard** - done.
 
 ### Option B: Local Python
 ```bash
@@ -103,7 +103,7 @@ Open **http://localhost:8000/dashboard**
 
 ## Features
 
-### YAML-Defined Checks — No Code Required
+### YAML-Defined Checks - No Code Required
 ```yaml
 checks:
   - name: "Order ID is unique"
@@ -139,18 +139,18 @@ Every run automatically profiles each data source:
 - Data type detection
 
 ### Statistical Anomaly Detection
-Data-Pulse stores profile history in SQLite and uses **z-score analysis** to detect when today's data deviates significantly from the baseline. If your `amount` column usually has 2% nulls but today it's 15% — Data-Pulse flags it.
+Data-Pulse stores profile history in SQLite and uses **z-score analysis** to detect when today's data deviates significantly from the baseline. If your `amount` column usually has 2% nulls but today it's 15% - Data-Pulse flags it.
 
 ### Slack Alerts with Severity Routing
 Failed checks trigger Slack notifications automatically:
-- 🔴 **Critical** failures — things that should never happen (duplicate primary keys, missing IDs)
-- 🟡 **Warning** failures — things to investigate (null emails, negative amounts)
+- 🔴 **Critical** failures - things that should never happen (duplicate primary keys, missing IDs)
+- 🟡 **Warning** failures - things to investigate (null emails, negative amounts)
 
 ### Real-Time Dashboard
 A dark-themed web dashboard showing:
-- **Pipeline Health Score** — single percentage showing overall data quality
+- **Pipeline Health Score** - single percentage showing overall data quality
 - **Pass/Fail/Critical** stats at a glance
-- **Check results table** — sortable, with severity badges and failure details
+- **Check results table** - sortable, with severity badges and failure details
 - Auto-refreshes every 30 seconds
 
 ---
@@ -167,18 +167,18 @@ A dark-themed web dashboard showing:
          ┌───────────────────────────────────────────┐
          │              DataPulse Engine              │
          │                                           │
-         │  ┌──────────┐  ┌──────────┐  ┌─────────┐ │
-         │  │ Profiler  │→│  Check   │→│ Anomaly │ │
-         │  │          │  │  Runner  │  │ Detector│ │
-         │  └──────────┘  └──────────┘  └─────────┘ │
+         │  ┌──────────┐  ┌──────────┐  ┌─────────┐  │
+         │  │ Profiler  │→│  Check   │→ │ Anomaly │  │
+         │  │          │  │  Runner  │  │ Detector│  │
+         │  └──────────┘  └──────────┘  └─────────┘  │
          │                                           │
          └──────────────────┬────────────────────────┘
                             │
                 ┌───────────┼───────────┐
                 ▼           ▼           ▼
          ┌──────────┐ ┌──────────┐ ┌──────────┐
-         │  SQLite  │ │  Slack   │ │  FastAPI  │
-         │ Storage  │ │  Alerts  │ │  + Dash   │
+         │  SQLite  │ │  Slack   │ │  FastAPI │
+         │ Storage  │ │  Alerts  │ │  + Dash  │
          └──────────┘ └──────────┘ └──────────┘
               │                         │
               │    Historical Data      │    http://localhost:8000
@@ -312,7 +312,7 @@ Contributions are welcome. To get started:
 
 ## License
 
-This project is licensed under the MIT License — use it however you want.
+This project is licensed under the MIT License - use it however you want.
 
 ---
 
